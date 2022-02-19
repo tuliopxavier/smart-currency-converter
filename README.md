@@ -1,4 +1,4 @@
-Esse projeto foi baseado em um desafio técnico proposto no <a href="https://dev-folio.app/" target="_blank">https://dev-folio.app/</a>.
+Esse projeto foi baseado em um desafio técnico proposto no <a href="https://dev-folio.app/" target="_blank">dev-folio.app/</a>.
 
 ### Sobre
 Projeto desenvolvido para estudo e prática de desenvolvimento front-end utilizando a biblioteca **React**, **Vite**, **Typescript**, **Styled Components**, custom hook, controlled components, consumindo **API Rest**, além da lib **date-fns** para trabalhar com datas.
@@ -9,7 +9,7 @@ Deploy com **continuous deployment** feito na **Vercel**.
 
 
 ### Demo do Projeto
-<a href="https://internacional-purchase-simulator.vercel.app/" target="_blank">https://internacional-purchase-simulator.vercel.app/</a>
+<a href="https://internacional-purchase-simulator.vercel.app/" target="_blank">internacional-purchase-simulator.vercel.app/</a>
 
 
 
