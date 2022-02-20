@@ -28,7 +28,15 @@ export const banksData = [
 		"name": "Next",
 		"backgroundColor": "#00ff5f",
 		"textColor": "#000",
-		"spreadPercentage": 4.0,
+		"spreadPercentage": 5.0,
 		"spreadLink": "https://www.next.me/duvidas"
+	},
+	{
+		"id": 4,
+		"name": "Neon",
+		"backgroundColor": "#0073cd",
+		"textColor": "#fff",
+		"spreadPercentage": 4.0,
+		"spreadLink": "https://neon.com.br/perguntas"
 	}
 ]
