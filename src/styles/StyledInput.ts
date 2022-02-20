@@ -38,6 +38,8 @@ export const StyledInput = styled.div`
 
     &::placeholder {
       font-size: .75rem;
+      color: #fff;
+      mix-blend-mode: difference;
     }
   }
 `;
