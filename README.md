@@ -9,7 +9,7 @@ Deploy com **continuous deployment** feito na **Vercel**.
 
 
 ### Demo do Projeto
-<a href="https://international-purchase-simulator.vercel.app/" target="_blank">internacional-purchase-simulator.vercel.app/</a>
+<a href="https://international-purchase-simulator.vercel.app/" target="_blank">international-purchase-simulator.vercel.app/</a>
 
 
 
