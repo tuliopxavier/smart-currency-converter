@@ -9,12 +9,12 @@ Deploy com **continuous deployment** feito na **Vercel**.
 
 
 ### Demo do Projeto
-<a href="https://internacional-purchase-simulator.vercel.app/" target="_blank">internacional-purchase-simulator.vercel.app/</a>
+<a href="https://international-purchase-simulator.vercel.app/" target="_blank">internacional-purchase-simulator.vercel.app/</a>
 
 
 
 ### Para testar
-- Clone o repositório: ```git clone https://github.com/tuliopxavier/internacional-purchase-simulator.git```
+- Clone o repositório: ```git clone https://github.com/tuliopxavier/international-purchase-simulator.git```
 - Instale as dependências: ```yarn install```
 - Acompanhe em modo de desenvolvimento: ```yarn dev```
 
