@@ -14,7 +14,7 @@ Deploy com **continuous deployment** feito na **Vercel**.
 
 
 ### Para testar
-- Clone o repositório: ```git clone https://github.com/tuliopxavier/international-purchase-simulator.git```
+- Clone o repositório: ```git clone https://github.com/tuliopxavier/smart-currency-converter.git```
 - Instale as dependências: ```yarn install```
 - Acompanhe em modo de desenvolvimento: ```yarn dev```
 
