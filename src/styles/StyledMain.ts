@@ -4,9 +4,10 @@ export const StyledMain = styled.main`
     display: flex;
     align-items: center;
     justify-content: center;
+    flex-direction: column;
 
-    width: 100%;
-    height: 100vh;
+    width: 100vw;
+    min-height: 100vh;
     
     transition: background-color .5s ease;
 
@@ -14,7 +15,7 @@ export const StyledMain = styled.main`
         display: flex;
         flex-direction: column;
         max-width: 16rem;
-        margin: 1.5rem .5rem;
+        margin: 4rem .5rem 6rem;
 
         word-break: break-all;
         overflow: visible;     
@@ -67,6 +68,14 @@ export const StyledMain = styled.main`
                 font-weight: 100;
             }
         }
+    }
+
+    & footer {
+        position: absolute;
+        bottom: 0;
+        text-align: center;
+        max-width: 20rem;
+        padding: 1rem;
     }
     
 `;
