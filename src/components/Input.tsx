@@ -17,6 +17,7 @@ export const Input = ({ style, label, type='number', id, value, placeholder, onC
       <label htmlFor={id}>{label}</label>
       <input
         type={type}
+        inputMode='numeric'
         style={style}
         id={id}
         value={value}
