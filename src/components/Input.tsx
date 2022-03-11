@@ -1,3 +1,4 @@
+import { ChangeEvent } from 'react';
 import { StyledInput } from '../styles/StyledInput';
 
 type Props = {
@@ -26,8 +27,8 @@ export const Input = ({ style, label, type='number', id, value, placeholder, onC
         onChange={onChange}
         placeholder={placeholder}
         disabled={disabled}
-        onInput={(e: any) => {
-          e.target.value = Math.max(0, parseFloat(e.target.value))
+        onInput={(e: ChangeEvent<HTMLInputElement>) => {
+          e.target.value = Math.max(0, Number(e.target.value))
             .toString()
             .slice(0, 9);
         }}
