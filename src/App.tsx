@@ -59,7 +59,7 @@ function App() {
           * Informações oficiais de spread 
         </a>
 
-        <h1> <span>R$</span> {realValue} </h1>
+        <h1> <span>R$</span> {realValue.toFixed(2)} </h1>
       </form>
     </StyledMain>
   );
