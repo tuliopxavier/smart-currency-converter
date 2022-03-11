@@ -18,7 +18,7 @@ function App() {
   };
 
   const handleDolarInput = (e: ChangeEvent<HTMLInputElement>): void => {
-    const dolarHandle = parseFloat(e.target.value);
+    const dolarHandle = Number(e.target.value);
     setDolarValue(dolarHandle);
   };
 
@@ -29,15 +29,15 @@ function App() {
       banksData[bankId].spreadPercentage,
       IOF
     );
-    setRealValue(parseFloat(real) || 0);
+    setRealValue(Number(real) || 0);
   }, [dolarValue, bankId]);
 
   return (
     <StyledMain style={{ backgroundColor: banksData[bankId].backgroundColor }}>
       <form style={{ color: banksData[bankId].textColor }}>
         <select
-          onChange={(e) => { setBankId(parseInt(e.target.value)); }}
-          style={{ color: banksData[bankId].textColor }}>
+          onChange={(e) => { setBankId(Number(e.target.value)); }}
+          style={{ color: banksData[bankId].textColor, borderBottom: `dashed 1px ${banksData[bankId].textColor}` }}>
             
             {banksData.map((bank) => {
               return (

@@ -14,7 +14,7 @@ export const StyledMain = styled.main`
         display: flex;
         flex-direction: column;
         max-width: 16rem;
-        padding: 2rem;
+        margin: 1.5rem .5rem;
 
         word-break: break-all;
         overflow: visible;     
@@ -28,8 +28,15 @@ export const StyledMain = styled.main`
 
             border: none;
             outline: none;
+            border-bottom: dashed 1px #00000050;
             
-            transition: background-color .5s ease;
+            transition: all .25s ease;
+
+            &:focus {
+                outline: 1px solid #ffffff50;
+                outline-offset: 1rem;
+                outline-style: dashed;
+            }
         }
 
         & a {
@@ -41,6 +48,11 @@ export const StyledMain = styled.main`
             &:hover {
                 text-decoration: revert;
                 opacity: 1;
+            }
+
+            &:focus {
+                outline: 1px solid #ffffff;
+                outline-style: dashed;
             }
         }
 
