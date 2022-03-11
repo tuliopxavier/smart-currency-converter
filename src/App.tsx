@@ -20,6 +20,7 @@ function App() {
   const handleDolarInput = (e: ChangeEvent<HTMLInputElement>): void => {
     const dolarHandle = Number(e.target.value);
     setDolarValue(dolarHandle);
+    // .replace(/([0-9]{2})$/g, ".$1")
   };
 
   useEffect(() => {

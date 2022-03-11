@@ -18,20 +18,19 @@ export const Input = ({ style, label, type='number', id, value, placeholder, onC
       <label htmlFor={id}>{label}</label>
       <input
         type={type}
-        inputMode='numeric'
+        inputMode='decimal'
         style={style}
         id={id}
         value={value}
         min='0'
         step='any'
+        maxLength={9}
         onChange={onChange}
         placeholder={placeholder}
         disabled={disabled}
-        onInput={(e: ChangeEvent<HTMLInputElement>) => {
-          e.target.value = Math.max(0, Number(e.target.value))
-            .toString()
-            .slice(0, 9);
-        }}
+        // onInput={(e: ChangeEvent<HTMLInputElement>) => {
+        //   if (e.target.value.toString().length = 10 ) return false;
+        // }}
       />
     </StyledInput>
   );
