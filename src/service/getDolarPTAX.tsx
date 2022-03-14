@@ -5,14 +5,15 @@ export const getDolarPTAX = () => {
   const currentDate = new Date();
   
   useEffect(() => {
-    const fetchDolarPTAX = (dayBefore = 0) => {
-      const validDate = `${currentDate.getMonth()+1}/${currentDate.getDate()+dayBefore}/${currentDate.getFullYear()}`;
+    const fetchDolarPTAX = (dateModifier = 0) => {
+      // fetchDate = 'MM/DD/YYYY'
+      const fetchDate = `${currentDate.getMonth()+1}/${currentDate.getDate()+dateModifier}/${currentDate.getFullYear()}`;
 
-      fetch(`https://olinda.bcb.gov.br/olinda/servico/PTAX/versao/v1/odata/CotacaoDolarDia(dataCotacao=@dataCotacao)?@dataCotacao='${validDate}'&$top=100&$format=json&$select=cotacaoVenda`)
+      fetch(`https://olinda.bcb.gov.br/olinda/servico/PTAX/versao/v1/odata/CotacaoDolarDia(dataCotacao=@dataCotacao)?@dataCotacao='${fetchDate}'&$top=100&$format=json&$select=cotacaoVenda`)
       .then(response => response.json())
       .then(data => {
-        // IF contacaoVenda IS UNDEFINED, FETCH THE DAY BEFORE
-        (data.value[0]) ? setDolarPTAX(data.value[0].cotacaoVenda) : (fetchDolarPTAX(dayBefore-1));
+        // IF contacaoVenda IS UNDEFINED (WEEKEND OR HOLIDAYS), FETCH THE DAY BEFORE
+        (data.value[0]) ? setDolarPTAX(data.value[0].cotacaoVenda) : (fetchDolarPTAX(dateModifier-1));
       });
     };
 
