@@ -1,18 +1,8 @@
 import { ChangeEvent } from 'react';
 import { StyledInput } from '../styles/StyledInput';
+import type { inputProps } from '../types/inputProps'
 
-type Props = {
-  id: string;
-  label: string;
-  style?: {};
-  type?: string;
-  value?: number;
-  placeholder?: string;
-  disabled?: boolean;
-  onChange?: void | any;
-};
-
-export const Input = ({ style, label, type='number', id, value, placeholder, onChange, disabled, }: Props) => {
+export const Input = ({ style, label, type='number', id, value, placeholder, onChange, disabled, }: inputProps) => {
   return (
     <StyledInput>
       <label htmlFor={id}>{label}</label>
