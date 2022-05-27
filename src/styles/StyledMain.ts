@@ -15,7 +15,7 @@ export const StyledMain = styled.main`
         display: flex;
         flex-direction: column;
         max-width: 16rem;
-        margin: 4rem .5rem 6rem;
+        margin: 4rem .5rem;
 
         word-break: break-all;
         overflow: visible;     
@@ -76,8 +76,6 @@ export const StyledMain = styled.main`
     }
 
     & footer {
-        position: absolute;
-        bottom: 0;
         text-align: center;
         max-width: 20rem;
         padding: 1rem;
