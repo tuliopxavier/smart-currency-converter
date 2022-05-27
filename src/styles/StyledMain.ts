@@ -22,6 +22,7 @@ export const StyledMain = styled.main`
         
         & select {
             background-color: transparent;
+            width: 100%;
             height: 3rem;
             text-align: center;
             font-size: 2.5rem;
@@ -38,6 +39,10 @@ export const StyledMain = styled.main`
                 outline-offset: 1rem;
                 outline-style: dashed;
             }
+        }
+
+        & input {
+            width: 100%;
         }
 
         & a {

@@ -62,7 +62,7 @@ function App() {
         <h1> <span>R$</span> {realValue.toFixed(2)} </h1>
       </form>
       <footer style={{ color: banksData[bankId].textColor }}>
-        <p>Copyleft - 2022</p>
+        <small>Copyleft - 2022</small>
       </footer>
     </StyledMain>
   );
