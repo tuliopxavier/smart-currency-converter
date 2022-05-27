@@ -9,11 +9,15 @@
     <meta name="author" content="Túlio Pereira Xavier"/>
 
     <link rel="shortcut icon" href="https://cdn-icons-png.flaticon.com/512/893/893503.png" type="image/x-icon">
+    <link rel="manifest" href="./public/manifest.json" />
 
     <title>Smart Currency Converter</title>
   </head>
   <body>
     <div id="root"></div>
     <script type="module" src="/src/main.tsx"></script>
+
+    <!-- PWA service worker -->
+    <script type="module" src="/public/registerServiceWorker.js"></script>
   </body>
 </html>
