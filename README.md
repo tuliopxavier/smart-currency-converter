@@ -1,9 +1,11 @@
 <sub>* Esse projeto foi baseado em um desafio técnico proposto no <a href="https://dev-folio.app/" target="_blank">dev-folio.app/</a>.</sub>
 
 ### Sobre
-Projeto desenvolvido para estudo e prática de desenvolvimento front-end utilizando a biblioteca **React**, **Vite**, **Typescript**, **Styled Components**, custom hook, controlled components, consumindo **API Rest**, além da lib **date-fns** para trabalhar com datas.
+Projeto desenvolvido para estudo e prática de desenvolvimento front-end utilizando a biblioteca **React**, **Vite**, **Typescript**, **Styled Components**, **Axios**, custom hook, controlled components, consumindo **API Rest**, além da lib **date-fns** para trabalhar com datas.
 
 Este web app simula o valor de compras internacionais fazendo todo o cálculo automatizado, com IOF e valores de spread de cada banco, atualizados automaticamente de acordo com a cotação do dia.
+
+Foi implementado também como **PWA (Progressive Web Application)**.
 
 Deploy com **continuous deployment** feito na **Vercel**.
 
@@ -15,9 +17,18 @@ Deploy com **continuous deployment** feito na **Vercel**.
 <hr>
 
 ### Para testar
-- Clone o repositório: ```git clone https://github.com/tuliopxavier/smart-currency-converter.git```
-- Instale as dependências: ```yarn install```
-- Acompanhe em modo de desenvolvimento: ```yarn dev```
+- Clone o repositório: 
+```console
+git clone https://github.com/tuliopxavier/smart-currency-converter.git
+```
+- Instale as dependências:
+```console
+yarn install
+```
+- Acompanhe em modo de desenvolvimento:
+```console
+yarn dev
+```
 
 <hr>
 
@@ -29,8 +40,11 @@ Deploy com **continuous deployment** feito na **Vercel**.
 - Yarn
 - Styled Components
 - Sass
+- Axios
+- PWA
+- Service Worker
 - API Rest
-- date-fns
+- Date-fns
 
 <hr>
 
@@ -45,4 +59,4 @@ Deploy com **continuous deployment** feito na **Vercel**.
 
 Ou simplesmente abra uma issue descrevendo suas idéias ou observações.
 
-&#127279; Sinta-se a vontade para copiar e modificar o que quiser. Manter o conhecimento livre transforma nossa comunidade para melhor, a gente inspira e cria um futuro mais acolhedor. “...o que queremos, de fato, é que as idéias voltem a ser perigosas.”
+&#127279; Sinta-se a vontade para copiar e modificar o que quiser. Manter o conhecimento livre transforma nossa comunidade para melhor, a gente inspira e cria um futuro mais acolhedor.
