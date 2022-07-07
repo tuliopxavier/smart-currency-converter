@@ -1,7 +1,7 @@
 {
     "name": "Smart Currency Converter",
     "short_name": "Smart Currency Converter",
-    "start_url": "../",
+    "start_url": "./",
     "display": "standalone",
     "background_color": "#9900ff",
     "description": "Este app converte a moeda de suas compras internacionais USD-BRL (d\u00f3lar para real) com valores de IOF e spread atualizados de acordo com o c\u00e2mbio di\u00e1rio.",
