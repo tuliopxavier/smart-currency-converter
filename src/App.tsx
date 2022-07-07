@@ -2,14 +2,15 @@ import { ChangeEvent, useEffect, useState } from 'react';
 import { StyledMain } from './styles/StyledMain';
 import { banksData } from '../banksData';
 import { Input } from './components/Input';
-import { IOF } from './service/utils';
-import { getDolarPTAX } from './service/getDolarPTAX';
-import { useDolarConverter } from './service/useDolarConverter';
+import { IOF } from './services/utils';
+import { getDolarPTAX } from './services/getDolarPTAX';
+import { useDolarConverter } from './services/useDolarConverter';
+import { currencyMask } from './services/currencyMask';
 
 function App() {
   const [bankId, setBankId] = useState<number>(0);
   const [dolarValue, setDolarValue] = useState<number>(0);
-  const [realValue, setRealValue] = useState<number>(0);
+  const [realValue, setRealValue] = useState<string>('0.00');
   const dolarPTAX = getDolarPTAX();
 
   const inputStyle = {
@@ -18,9 +19,9 @@ function App() {
   };
 
   const handleDolarInput = (e: ChangeEvent<HTMLInputElement>): void => {
-    const dolarHandle = Number(e.target.value);
-    setDolarValue(dolarHandle);
-    // .replace(/([0-9]{2})$/g, ".$1")
+    if ((e.target.value).length > 8) { return }; // max length 99.999,99
+    let maskedDolarInput = Number(currencyMask(e.target.value).replace('.', '').replace(',', '.'));
+    setDolarValue(maskedDolarInput);
   };
 
   useEffect(() => {
@@ -29,8 +30,8 @@ function App() {
       dolarPTAX,
       banksData[bankId].spreadPercentage,
       IOF
-    );
-    setRealValue(Number(real) || 0);
+    );    
+    setRealValue(currencyMask(real));
   }, [dolarValue, bankId]);
 
   return (
@@ -39,31 +40,28 @@ function App() {
         <select
           onChange={(e) => { setBankId(Number(e.target.value)); }}
           style={{ color: banksData[bankId].textColor, borderBottom: `dashed 1px ${banksData[bankId].textColor}` }}>
-            
-            {banksData.map((bank) => {
-              return (
-                <option key={bank.id} value={`${bank.id}`}>
-                  {bank.name}
-                </option>
-              );
-            })}
+
+          {banksData.map((bank) => {
+            return (
+              <option key={bank.id} value={`${bank.id}`}>
+                {bank.name}
+              </option>
+            );
+          })}
 
         </select>
 
-        <Input id='dolar' label='Dólar' style={inputStyle} placeholder='Insira valor em USD' onChange={handleDolarInput} />
+        <Input id='dolar' value={dolarValue?.toFixed(2)} label='Dólar' style={inputStyle} placeholder='Insira valor em USD' onChange={handleDolarInput} />
         <Input id='dolar-ptax' label='Dólar PTAX' value={dolarPTAX} style={inputStyle} disabled />
         <Input id='iof' label='IOF (%)' value={IOF} style={inputStyle} disabled />
         <Input id='spread' label='Spread (%)' value={banksData[bankId].spreadPercentage} style={inputStyle} disabled />
 
-        <a href={banksData[bankId].spreadLink} target='_blank' style={{ color: banksData[bankId].textColor }}> 
-          * Informações oficiais de spread 
+        <a href={banksData[bankId].spreadLink} target='_blank' style={{ color: banksData[bankId].textColor }}>
+          * Informações oficiais de spread
         </a>
 
-        <h1> <span>R$</span> {realValue.toFixed(2)} </h1>
+        <h1> <span>R$</span> {realValue} </h1>
       </form>
-      <footer style={{ color: banksData[bankId].textColor }}>
-        <small>Copyleft - 2022</small>
-      </footer>
     </StyledMain>
   );
 }

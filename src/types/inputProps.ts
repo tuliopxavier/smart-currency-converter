@@ -3,7 +3,7 @@ export type inputProps = {
 	label: string;
 	style?: {};
 	type?: string;
-	value?: number;
+	value?: number | string;
 	placeholder?: string;
 	disabled?: boolean;
 	onChange?: void | any;

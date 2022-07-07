@@ -7,7 +7,7 @@ export const StyledMain = styled.main`
     flex-direction: column;
 
     width: 100vw;
-    min-height: 100vh;
+    height: 100vh;
     
     transition: background-color .5s ease;
 
@@ -15,8 +15,7 @@ export const StyledMain = styled.main`
         display: flex;
         flex-direction: column;
         max-width: 16rem;
-        margin: 4rem .5rem;
-
+        
         word-break: break-all;
         overflow: visible;     
         
@@ -33,6 +32,10 @@ export const StyledMain = styled.main`
             border-bottom: dashed 1px #00000050;
             
             transition: all .25s ease;
+
+            & option {
+                background-color: rgba(0,0,0,0.5);
+            }
 
             &:focus {
                 outline: 1px solid #ffffff50;
